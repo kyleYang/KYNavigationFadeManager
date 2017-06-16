@@ -1,0 +1,6 @@
+framework module KYNavigationFadeManager {
+  umbrella header "KYNavigationFadeManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
