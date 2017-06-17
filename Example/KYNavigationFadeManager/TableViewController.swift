@@ -22,10 +22,6 @@ open class TableViewController: UIViewController {
         self.extendedLayoutIncludesOpaqueBars = true;
         self.automaticallyAdjustsScrollViewInsets = false
 
-        self.view.backgroundColor = UIColor.yellow
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes =  [NSForegroundColorAttributeName:UIColor.red]
-
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tablecell")
@@ -34,9 +30,9 @@ open class TableViewController: UIViewController {
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[table]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["table":self.tableView]))
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[table]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["table":self.tableView]))
 
-        let headerView = UIView(frame: CGRect(x:0,y:0,width:0,height:200))
-        headerView.backgroundColor = UIColor.blue
-
+        let headerView = UIImageView(frame: CGRect(x:0,y:0,width:0,height:200))
+        headerView.image = UIImage(named:"header")
+        headerView.contentMode = .scaleAspectFill
         self.tableView.tableHeaderView = headerView
 
 
