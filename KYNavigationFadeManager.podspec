@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KYNavigationFadeManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KYNavigationFadeManager.'
+  s.summary          = 'A easy way to fade UINavigationController bar and support change bar item color'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    This fade manager is a easy way to manage the uinavigationbar Support to change UIBarButtonItem and title color when scroll , the navigation can be clear color (change the alpha from 0 - 1) The UIBarButtonItem only support UIBarButtonItem.image and UIBarButtonItem's customView is UIButton (image and backgroundimage) 。 The fullColor shoulde be set. Not detech the image color because it's maybe wrong!
                        DESC
 
   s.homepage         = 'https://github.com/kyleYang/KYNavigationFadeManager'
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/kyleYang/KYNavigationFadeManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'KYNavigationFadeManager/Classes/**/*'
   
@@ -37,6 +37,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-    s.frameworks = 'UIKit', 'MapKit'
+    s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
