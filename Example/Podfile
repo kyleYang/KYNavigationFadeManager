@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'KYNavigationFadeManager_Example' do
   pod 'KYNavigationFadeManager', :path => '../'
-
-  target 'KYNavigationFadeManager_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
-  end
 end

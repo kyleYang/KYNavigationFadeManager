@@ -1,8 +1,8 @@
 {
   "name": "KYNavigationFadeManager",
   "version": "0.1.0",
-  "summary": "A short description of KYNavigationFadeManager.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A easy way to fade UINavigationController bar and support change bar item color",
+  "description": "This fade manager is a easy way to manage the uinavigationbar Support to change UIBarButtonItem and title color when scroll , the navigation can be clear color (change the alpha from 0 - 1) The UIBarButtonItem only support UIBarButtonItem.image and UIBarButtonItem's customView is UIButton (image and backgroundimage) 。 The fullColor shoulde be set. Not detech the image color because it's maybe wrong!",
   "homepage": "https://github.com/kyleYang/KYNavigationFadeManager",
   "license": {
     "type": "MIT",
@@ -16,7 +16,8 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "KYNavigationFadeManager/Classes/**/*"
+  "source_files": "KYNavigationFadeManager/Classes/**/*",
+  "frameworks": "UIKit"
 }

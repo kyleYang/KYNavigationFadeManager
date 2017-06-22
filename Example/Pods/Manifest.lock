@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  KYNavigationFadeManager: 0a42531d5c0ac995872608f30abbaf33400bac6a
+  KYNavigationFadeManager: b88e811d3634dc9e96cf35c504044594c9be731f
 
 PODFILE CHECKSUM: 5ef33fe562a87b2ccded035e84f6dfe0bfaac3ea
 
