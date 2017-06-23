@@ -20,14 +20,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Easy to use it
 
 ### init
-```
+```swift
 self.fadeManager = KYNavigationFadeManager(viewController: self, scollView: self.tableView, zeroColor: UIColor.white, fullColor: UIColor.red)
 self.fadeManager.allowTitleHidden = shouldeHiddenTitle
 self.fadeManager.zeroAlphaOffset  = 0
 self.fadeManager.fullAlphaOffset  = 200
 ```
 ### prepare and run
-```
+```swift
  open override func viewWillAppear(_ animated: Bool) {
    super.viewWillAppear(animated)
    self.fadeManager.viewWillAppear(animated)
