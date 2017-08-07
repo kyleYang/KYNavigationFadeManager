@@ -1,23 +1,19 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - KYNavigationFadeManager (0.1.0)
+  - KYNavigationFadeManager (0.2.0)
+  - WZLBadge (1.2.6)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - KYNavigationFadeManager (from `../`)
+  - WZLBadge
 
 EXTERNAL SOURCES:
   KYNavigationFadeManager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  KYNavigationFadeManager: b88e811d3634dc9e96cf35c504044594c9be731f
+  KYNavigationFadeManager: 1424cd489aef801b9ca847f3e5b960467820cd32
+  WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
 
-PODFILE CHECKSUM: 5ef33fe562a87b2ccded035e84f6dfe0bfaac3ea
+PODFILE CHECKSUM: 459df5c22e349ad86e0dbf9d13e9be015c29c9f9
 
 COCOAPODS: 1.2.1
