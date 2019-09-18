@@ -1,0 +1,20 @@
+PODS:
+  - SwiftLint (0.35.0)
+  - WZLBadge (1.2.6)
+
+DEPENDENCIES:
+  - SwiftLint
+  - WZLBadge
+
+SPEC REPOS:
+  trunk:
+    - SwiftLint
+    - WZLBadge
+
+SPEC CHECKSUMS:
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
+
+PODFILE CHECKSUM: 8663bf469ab58f67dff5f2b009c36923c3032d9c
+
+COCOAPODS: 1.8.0.beta.2

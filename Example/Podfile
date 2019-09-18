@@ -1,6 +1,0 @@
-use_frameworks!
-
-target 'KYNavigationFadeManager_Example' do
-  pod 'KYNavigationFadeManager', :path => '../'
-  pod 'WZLBadge'
-end

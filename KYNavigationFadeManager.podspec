@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KYNavigationFadeManager'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A easy way to fade UINavigationController bar and support change bar item color'
 
 # This description is used to generate tags and improve search results.
@@ -28,15 +28,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/kyleYang/KYNavigationFadeManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
 
-  s.source_files = 'KYNavigationFadeManager/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'KYNavigationFadeManager' => ['KYNavigationFadeManager/Assets/*.png']
-  # }
+  s.source_files = 'Sources/*.swift'
+  s.frameworks = 'UIKit'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-    s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
