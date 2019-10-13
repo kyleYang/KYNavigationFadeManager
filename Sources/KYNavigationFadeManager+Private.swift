@@ -98,11 +98,8 @@ extension KYNavigationFadeManager {
     
     // recover to the init value
     func recoverOriginValues() {
-        
-        let color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        let size = CGSize(width: UIScreen.main.bounds.width, height: 64)
-        
-        self.navigationBar?.setBackgroundImage(UIImage.createImage(color: color, size: size) , for: .default)
+    
+        self.navigationBar?.setBackgroundImage(self.backgroundImage, for: .default)
         self.navigationBar?.isTranslucent = false
         self.navigationBar?.tintColor = self.originTintColor
         self.navigationBar?.barTintColor = self.originBarTintColor
@@ -376,9 +373,14 @@ extension KYNavigationFadeManager {
     // MARK: calculate the current alpha with offset
     fileprivate func calculatAlpha(_ offset : CGFloat) -> Float {
         
+        if offset < self.zeroAlphaOffset {
+            return self.minAlphaValue
+        } else if offset > self.fullAlphaOffset {
+            return self.maxAlphaValue
+        }
+        
         var currentAlpha  : Float = Float((offset - self.zeroAlphaOffset) / (self.fullAlphaOffset - self.zeroAlphaOffset))
-        currentAlpha = currentAlpha < self.minAlphaValue ? self.minAlphaValue : currentAlpha
-        currentAlpha = currentAlpha > self.maxAlphaValue ? self.maxAlphaValue : currentAlpha
+        currentAlpha = min(max(currentAlpha, self.minAlphaValue), self.maxAlphaValue)
         currentAlpha = self.isReversed ? self.maxAlphaValue + self.minAlphaValue - currentAlpha : currentAlpha
         return currentAlpha
     }

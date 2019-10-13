@@ -8,27 +8,27 @@
 
 import UIKit
 
-public protocol KYNavigationFadeManagerDelegate : NSObjectProtocol {
+@objc public protocol KYNavigationFadeManagerDelegate : NSObjectProtocol {
     // this delegate method , you can change the view appear by yourself
     // if return true , the view will not change by fade manager
     // you can not change special view ,if you return true
-    optional func fadeManagerBarBackgroudColorChange(_ manager: KYNavigationFadeManager , bar : UINavigationBar?, alpha:CGFloat) -> Bool
-    optional func fadeManagerTitleColorChange(_ manager: KYNavigationFadeManager , alpha:CGFloat) -> Bool
-    optional func fadeManagerTitleViewColorChange(_ manager: KYNavigationFadeManager,title:UIView , alpha:CGFloat) -> Bool
-    optional func fadeManagerBarItemColorChange(_ manager: KYNavigationFadeManager , barItem : UIBarButtonItem, alpha:CGFloat) -> Bool
+    @objc optional func fadeManagerBarBackgroudColorChange(_ manager: KYNavigationFadeManager , bar : UINavigationBar?, alpha:CGFloat) -> Bool
+    @objc optional func fadeManagerTitleColorChange(_ manager: KYNavigationFadeManager , alpha:CGFloat) -> Bool
+    @objc optional func fadeManagerTitleViewColorChange(_ manager: KYNavigationFadeManager,title:UIView , alpha:CGFloat) -> Bool
+    @objc optional func fadeManagerBarItemColorChange(_ manager: KYNavigationFadeManager , barItem : UIBarButtonItem, alpha:CGFloat) -> Bool
 
     //Custom subviews recoer
     //if return ture , the manager will not recover by store values
     //if you want to customed the appear of each item , you shoulde alse customed the recover of each item
-    optional func fadeManagerBarBackgroudRecover(_ manager: KYNavigationFadeManager , bar : UINavigationBar) -> Bool
-    optional func fadeManagerTitleRecover(_ manager: KYNavigationFadeManager) -> Bool
-    optional func fadeManagerTitleViewRecover(_ manager: KYNavigationFadeManager,title:UIView) -> Bool
-    optional func fadeManagerBarItemRecover(_ manager: KYNavigationFadeManager , barItem : UIBarButtonItem) -> Bool
+    @objc optional func fadeManagerBarBackgroudRecover(_ manager: KYNavigationFadeManager , bar : UINavigationBar) -> Bool
+    @objc optional func fadeManagerTitleRecover(_ manager: KYNavigationFadeManager) -> Bool
+    @objc optional func fadeManagerTitleViewRecover(_ manager: KYNavigationFadeManager,title:UIView) -> Bool
+    @objc optional func fadeManagerBarItemRecover(_ manager: KYNavigationFadeManager , barItem : UIBarButtonItem) -> Bool
 
-    optional func fadeManager(_ manager: KYNavigationFadeManager, changeState:KYNavigationFadeState)
+    @objc optional func fadeManager(_ manager: KYNavigationFadeManager, changeState:KYNavigationFadeState)
 }
 
-public enum KYNavigationFadeState : Int {
+@objc public enum KYNavigationFadeState : Int {
     case unknow
     case faded
     case unfaded
@@ -123,7 +123,7 @@ public class KYNavigationFadeManager: NSObject {
     //When the bar go to the max apla (default is 0) , the offset
     public var fullAlphaOffset : CGFloat = 200
     //the min alpha of the bar
-     public var minAlphaValue : Float = 0
+    public var minAlphaValue : Float = 0
     //the max alpha of the bar
     public var maxAlphaValue : Float = 1
 

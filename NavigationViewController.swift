@@ -13,7 +13,7 @@ class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.setBackgroundImage(UIImage.pureImage(color: UIColor(rgb:0xFFFFFF)), for: .default)
+        self.navigationBar.setBackgroundImage(UIImage.pureImage(color: UIColor.red), for: .default)
         self.navigationBar.shadowImage = UIImage();
         self.navigationBar.barTintColor = UIColor.white;
         self.navigationBar.tintColor = UIColor.white;

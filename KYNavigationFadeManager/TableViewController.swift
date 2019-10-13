@@ -81,10 +81,7 @@ open class TableViewController: UIViewController {
     }
 
     @objc func buttonTapped(sender: UIButton) {
-
-        self.dismiss(animated: true) { 
-
-        };
+        self.navigationController?.popViewController(animated: true)
     }
 
     deinit {

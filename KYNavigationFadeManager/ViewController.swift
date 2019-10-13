@@ -57,20 +57,13 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
             let vc = TableViewController(nibName: nil, bundle: nil);
             vc.title = "透明无title"
             vc.shouldeHiddenTitle = true
-            let navi = NavigationViewController(rootViewController: vc)
-            self.present(navi, animated: true, completion: { 
-
-            });
+            self.navigationController?.pushViewController(vc, animated: true)
 
         }else if (indexPath.row == 1){
             let vc = TableViewController(nibName: nil, bundle: nil);
             vc.title = "透明有title"
             vc.shouldeHiddenTitle = false
-            let navi = NavigationViewController(rootViewController: vc)
-            self.present(navi, animated: true, completion: {
-
-            });
-
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
